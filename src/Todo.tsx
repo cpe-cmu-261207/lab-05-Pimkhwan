@@ -28,11 +28,7 @@ const TodoList = () => {
     if (taskName == '') {
       alert("Task cannot be empty!!")
     } else {
-      //use date.getTime() to get unique numeric id (https://www.w3schools.com/jsref/jsref_gettime.asp)
       const newId = (new Date()).getTime()
-
-      // create new task list (หากจะ set ค่าให้กับตัวแปรที่สร้างจาก useState จะต้องสร้างข้อมูลใหม่หมดเสมอ)
-      // spread syntax [...array] (https://www.freecodecamp.org/news/array-destructuring-in-es6-30e398f21d10/)
       const newTasks = [...tasks, { id: newId, name: taskName, isDone: false }]
 
       setTasks(newTasks)
@@ -42,7 +38,6 @@ const TodoList = () => {
   }
 
   const doneTask = (id: number) => {
-    // create new task list (หากจะ set ค่าให้กับตัวแปรที่สร้างจาก useState จะต้องสร้างข้อมูลใหม่หมดเสมอ)
     const newTasks = tasks
     const newdoneTasks = donetasks
     let doneTask
@@ -57,7 +52,6 @@ const TodoList = () => {
   }
 
   const deleteTask = (id: number) => {
-    // create new task list (หากจะ set ค่าให้กับตัวแปรที่สร้างจาก useState จะต้องสร้างข้อมูลใหม่หมดเสมอ)
     const newTasks = tasks.filter(x => x.id !== id)
     setTasks(newTasks)
   }
@@ -70,7 +64,7 @@ const TodoList = () => {
   }
 
   return (
-    // task input and add button 
+
     <div className='mx-auto max-w-4xl'>
       <div className='flex space-x-1'>
         <input className='border border-gray-400 w-full text-2xl'

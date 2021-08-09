@@ -4,7 +4,7 @@ type TaskProps = {
   id: number;
   name: string;
   doneFn: Function;
-  deleteFn: Function; //Function type
+  deleteFn: Function;
   isDone: boolean
 }
 
