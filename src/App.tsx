@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import Todolist from './Todo';
+import Todolist from './Todolist';
 import Footer from './Footer'
 import { useState } from 'react'
 import Task from './Task';
